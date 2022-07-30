@@ -62,17 +62,18 @@ header .navigation li a {
 
 }
 
-content {
+.content {
     position: relative;
-    width: 100%;
+    width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
-content .textBox {
+.content .textBox {
     position: relative;
-    max-width: 600px;
+    max-width: 500px;
     margin-right: 20px;
 }
 
@@ -137,9 +138,11 @@ content .textBox {
 }
 
 .swiper-container {
-    width: 500px;
+    max-width: 900px;
     padding-top: 50px;
     padding-bottom: 50px;
+    overflow: hidden;
+    /* display: none; */
 }
 
 .swiper-slide {
@@ -152,9 +155,10 @@ content .textBox {
 }
 
 .content .imgBox {
+    /* position: absolute; */
     width: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .content .imgBox img {
@@ -170,4 +174,43 @@ content .textBox {
 .swiper-container-3d .swiper-slide-shadow-left,
 .swiper-container-3d .swiper-slide-shadow-right {
     background-image: none;
+}
+
+/* .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
+    perspective: 600px;
+} */
+
+@media (max-width: 991px) {
+    header {
+        padding: 40px;
+    }
+
+    section {
+        padding: 150px 40px;
+    }
+
+    .sci {
+        left: 40px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .textBox, .content .imgBox {
+        max-width: 100%;
+    }
+
+    .swiper-slide {
+        /* background-position: center;
+        background-size: cover;
+        width: 180px;  */
+        height: 300px;
+        /* display: flex;
+        justify-content: center;  */
+    }
+
+    header .navigation {
+        display: none;
+    }
 }
